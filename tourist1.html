@@ -1,0 +1,48 @@
+<html>
+<head>
+<h1>TOURIST BOOKING</h1>
+<title>user login</title>
+</head>
+<style>
+*{margin 0; padding: 0;}
+body{background: url(myimages/tt.jpg)no-repeat;background-size:cover; font-family: sans-sarif;}
+.form-wrap{ width: 320px; background:light; padding: 40px 20px ; box-sizing: border-box; position: fixed; left: 15%; top: 54%; transform: translate(-50%,-50%);}
+h1{text-align: center; color: black; font-weight: normal; margin-bottom: 20px;}
+
+input{width: 100%; background:none; border: 1px solid #fff; border-radius: 3px; padding: 6px 15px; box-sizing: border-box; margin-bottom: 20px; font-size: 16px; color: #fff;}
+
+input[type="submit"]{ background: #bac675; border: 0; cursor: pointer; color:#3e3d3d}
+input[type="submit"] :hover{background: #a4b15c; transition: -6s;}
+
+placeholder{color:red}
+</style>
+<body>
+<div class="form-wrap">
+<form action="tourist1.php" method="post">
+<h2>SIGN UP</h2>
+
+<form name="tourist1" onsubmit="return validation()">
+<input type="number" placeholder="TOURIST_ID" name="Tourist_id" pattern="[0-9]{10}">
+<input type="text" placeholder="NAME" name="Name">
+<input type="MOBILE" placeholder="MOBILE" name="Mobile" pattern="[0-9]{10}" placeholder="enter your 10 digit number">
+<input type="text" placeholder="EMAIL" name="Email">
+<input type="submit" value="Submit">
+<button><a href ='viewtable.html'>VIEW TOURIST</a></button>
+<a href ='touristview.php'>VIEW RESULT</a>
+</form>
+<!--java script-->
+<script type="text/javascript">
+function validation() {
+var Name = document.login.Name.value;
+var Address = document.login.Name.value;
+
+if(Name==""||Address=="") {
+alert("Name should not start with -,# and number");
+return;
+}
+}
+</script>
+</form>
+</div>
+</body>
+</html>
